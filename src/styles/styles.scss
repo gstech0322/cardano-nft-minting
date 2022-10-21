@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500;600;700&display=swap");
+@import "./variables.scss";
+
+html,
+body {
+  width: 100vw;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: linear-gradient(
+    180deg,
+    $pink-dark,
+    $pink-light,
+    $blue-light
+  );
+}
+
+* {
+  outline: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.container {
+  width: 90%;
+  max-width: 1280px;
+}

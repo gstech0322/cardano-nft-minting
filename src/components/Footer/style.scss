@@ -1,0 +1,16 @@
+@import "../../styles/variables.scss";
+
+.footer {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0;
+
+  & > a {
+    font-size: 36px !important;
+
+    &:first-child {
+      margin-right: 24px;
+    }
+  }
+}

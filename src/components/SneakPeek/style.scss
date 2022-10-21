@@ -1,0 +1,106 @@
+@import "../../styles/variables.scss";
+
+.sneakpeek {
+  width: 100%;
+  padding: 128px 0 64px;
+  background-image: url("../../resources/our-story.png");
+  background-size: 100% 650px;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  align-items: center;
+  z-index: 4;
+
+  @media (max-width: 768px) {
+    padding: 64px 0 64px;
+    background-size: cover;
+  }
+
+  &-title {
+    padding: 32px 0;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: $black;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+  }
+
+  &-wrapper {
+    display: grid;
+    grid-template: auto / 1fr 1fr;
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+
+    @media (max-width: 768px) {
+      grid-template: auto / 1fr;
+    }
+  }
+
+  &-iterator {
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: intrinsic;
+    height: stretch;
+
+    & > img {
+      width: 100%;
+      max-width: 360px;
+      border-radius: 16px;
+    }
+  }
+
+  &-hot {
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+
+    &:before {
+      content: "🏆 ";
+
+      @media (max-width: 768px) {
+        content: "🏆 ";
+      }
+    }
+
+    @media (max-width: 1024px) {
+      padding: 0 32px 0 0;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+      text-align: center;
+      padding: 0 24px 8px;
+    }
+  }
+
+  &-comment {
+    justify-content: center;
+
+    & > span {
+      font-size: 18px;
+      padding: 0 64px 0 0;
+      color: $black;
+
+      &:not(:last-child) {
+        margin-bottom: 32px;
+
+        @media (max-width: 768px) {
+          margin-bottom: 16px;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        padding: 0 24px 0 0;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+        text-align: center;
+        padding: 0 24px 12px;
+      }
+    }
+  }
+}

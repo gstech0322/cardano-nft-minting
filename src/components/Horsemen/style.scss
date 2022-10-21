@@ -1,0 +1,57 @@
+@import "../../styles/variables.scss";
+
+.horsemen {
+  width: 100%;
+  padding: 64px 0 24px;
+  z-index: 1;
+  align-items: center;
+
+  &-title {
+    padding: 32px 0;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: $black;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+  }
+
+  &-wrapper {
+    display: grid;
+    grid-template: auto / 1fr 1fr 1fr 1fr;
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+
+    @media (max-width: 768px) {
+      grid-template: auto / 1fr 1fr;
+      grid-column-gap: 12px;
+      grid-row-gap: 12px;
+    }
+
+    @media (max-width: 425px) {
+      grid-template: auto / 1fr;
+    }
+  }
+
+  &-item {
+    align-items: center;
+
+    & > img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    & > span {
+      padding-top: 16px;
+      font-size: 36px;
+      font-family: "Great Vibes", cursive;
+      font-weight: bold;
+
+      @media (max-width: 768px) {
+        font-size: 28px;
+      }
+    }
+  }
+}

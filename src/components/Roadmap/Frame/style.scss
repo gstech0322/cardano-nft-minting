@@ -1,0 +1,97 @@
+@import "../../../styles/variables.scss";
+
+.roadmap-frame {
+  position: relative;
+  padding: 3px;
+  background-image: linear-gradient(135deg, $pink-dark, $blue-dark);
+
+  &-deco {
+    &-top {
+      position: absolute;
+      width: calc(100% + 8px);
+      height: 4px;
+      background-image: linear-gradient(135deg, $white, 40%, $pink-dark);
+      top: -8px;
+      right: 0;
+      border-radius: 50%;
+      z-index: 2;
+    }
+    &-right {
+      position: absolute;
+      width: 4px;
+      height: calc(100% + 8px);
+      background-image: linear-gradient(135deg, $blue-dark, 80%, $white);
+      top: 24px;
+      right: 8px;
+      border-radius: 50%;
+      z-index: 2;
+    }
+    &-bottom {
+      position: absolute;
+      width: calc(100% + 8px);
+      height: 4px;
+      background-image: linear-gradient(135deg, $blue-dark, 80%, $white);
+      bottom: -8px;
+      left: 0;
+      border-radius: 50%;
+      z-index: 2;
+    }
+    &-left {
+      position: absolute;
+      width: 4px;
+      height: calc(100% + 8px);
+      background-image: linear-gradient(
+        95deg,
+        $white,
+        10%,
+        $white,
+        50%,
+        $pink-dark
+      );
+      bottom: 24px;
+      left: 8px;
+      border-radius: 50%;
+      z-index: 2;
+    }
+    &-triangle {
+      &-top {
+        position: absolute;
+        width: 36px;
+        height: 16px;
+        top: 8px;
+        right: 12px;
+        background-image: linear-gradient(180deg, $blue-dark, 67%, $white);
+        clip-path: polygon(50% 100%, 100% 0%, 0% 0%);
+        z-index: 2;
+      }
+      &-bottom {
+        position: absolute;
+        width: 36px;
+        height: 16px;
+        bottom: 8px;
+        left: 12px;
+        background-image: linear-gradient(180deg, $white, 40%, $pink-dark);
+        clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+        z-index: 2;
+      }
+    }
+  }
+
+  &-contents {
+    position: relative;
+    background-color: #90befa;
+    padding: 24px;
+    z-index: 1;
+    font-size: 24px;
+    color: $white;
+
+    & > span {
+      padding-top: 16px;
+      font-size: 18px;
+
+      &:before {
+        content: "- ";
+      }
+    }
+  }
+}

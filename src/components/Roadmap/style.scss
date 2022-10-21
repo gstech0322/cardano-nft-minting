@@ -1,0 +1,198 @@
+@import "../../styles/variables.scss";
+
+.roadmap {
+  position: relative;
+  width: 100%;
+  padding: 64px 0 256px;
+  justify-content: center;
+  z-index: 3;
+
+  @media (max-width: 768px) {
+    padding: 64px 0;
+  }
+
+  &-decoration {
+    position: absolute;
+    width: 480px;
+    left: 0;
+
+    @media (max-width: 1280px) {
+      width: 400px;
+    }
+
+    @media (max-width: 768px) {
+      position: relative;
+    }
+
+    & > img {
+      width: 100%;
+    }
+
+    &-bottom {
+      position: absolute;
+      width: 400px;
+      padding-top: 64px;
+      right: 0;
+
+      @media (max-width: 768px) {
+        position: relative;
+        margin-left: auto;
+      }
+
+      & > img {
+        width: 100%;
+      }
+    }
+  }
+
+  &-title {
+    padding: 32px 0 128px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: $black;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+      padding: 32px 0 64px;
+    }
+  }
+
+  &-item {
+    display: grid;
+    grid-template-columns: calc(50% - 40px) 80px calc(50% - 40px);
+
+    @media (max-width: 768px) {
+      grid-template-columns: 32px calc(100% - 32px);
+    }
+
+    &:first-child {
+      .roadmap-item-milestones {
+        margin-top: -96px;
+
+        @media (max-width: 768px) {
+          margin-top: -32px;
+        }
+
+        &-line {
+          border-radius: 10px 10px 0 0;
+          background-color: $blue-light;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      .roadmap-item-milestones-line {
+        background-color: $blue-light;
+      }
+    }
+    &:nth-child(3) {
+      .roadmap-item-milestones-line {
+        background-image: linear-gradient($blue-light, #89dfda);
+      }
+    }
+    &:nth-child(4) {
+      .roadmap-item-milestones-line {
+        background-image: linear-gradient(#89dfda, #7bddd8);
+      }
+    }
+    &:nth-child(5) {
+      .roadmap-item-milestones-line {
+        background-image: linear-gradient(#7bddd8, #5ad8d2);
+      }
+    }
+
+    &:last-child {
+      .roadmap-item-milestones {
+        margin-bottom: -96px;
+
+        @media (max-width: 768px) {
+          margin-bottom: -32px;
+        }
+
+        &-line {
+          border-radius: 0 0 10px 10px;
+          background-image: linear-gradient(#5ad8d2, #3dd8d0);
+        }
+      }
+    }
+
+    & > div {
+      opacity: 0;
+    }
+
+    &-milestones {
+      position: relative;
+      opacity: 1 !important;
+      justify-content: center;
+      align-items: center;
+
+      @media (max-width: 768px) {
+        justify-content: flex-start;
+      }
+
+      &-line {
+        width: 14px;
+        height: 100%;
+
+        @media (max-width: 768px) {
+          width: 12px;
+        }
+      }
+
+      &-icon {
+        position: absolute;
+        width: 100%;
+
+        &:before {
+          content: " ";
+          width: 100%;
+          padding-top: 100%;
+          background-color: $white;
+          border-radius: 50%;
+          box-shadow: 0 0 0 8px rgba($color: $green, $alpha: 1);
+        }
+      }
+    }
+  }
+
+  &-step {
+    opacity: 1 !important;
+    padding: 36px 0;
+    align-items: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: $white;
+
+    &:before {
+      content: "< ";
+      font-size: 36px;
+    }
+  }
+}
+
+.show {
+  opacity: 1 !important;
+  font-size: 20px;
+  font-weight: bold;
+  color: $white;
+  background-size: 100% 100%;
+  margin: 0px 0;
+
+  @media (max-width: 768px) {
+    margin: 32px 0;
+  }
+
+  & > span {
+    font-size: 16px;
+    font-weight: normal;
+
+    &:first-child {
+      margin-top: 16px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}

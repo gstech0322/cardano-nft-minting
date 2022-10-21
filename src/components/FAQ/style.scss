@@ -1,0 +1,76 @@
+@import "../../styles/variables.scss";
+
+.faq {
+  width: 100%;
+  align-items: center;
+  z-index: 4;
+
+  &-title {
+    padding: 32px 0;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: $black;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+  }
+
+  &-wrapper {
+    padding: 16px 0;
+  }
+
+  &-item {
+    border-top: 1px solid $black;
+    padding: 16px;
+    transition: 0.5s;
+    z-index: 4;
+
+    &:last-child {
+      border-bottom: 1px solid $black;
+    }
+
+    & > span {
+      align-items: center;
+      justify-content: space-between;
+      color: $black;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
+    }
+
+    & > p {
+      height: 0;
+      margin: 0 auto;
+      opacity: 0;
+      overflow: hidden;
+      transition: 0.5s;
+      color: $black;
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+
+    &-icon {
+      transition: 0.5s;
+      transform: rotate(0deg);
+
+      &-reversed {
+        transition: 0.5s;
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}
+
+.selected {
+  padding: 16px 0 0;
+  opacity: 1 !important;
+  height: auto !important;
+}

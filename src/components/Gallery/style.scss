@@ -1,0 +1,37 @@
+@import "../../styles/variables.scss";
+
+.gallery {
+  position: relative;
+  width: 100%;
+  height: calc(240px + 64px);
+  padding: 32px 0;
+
+  &-wrapper {
+    position: absolute;
+    width: 4800px;
+    right: 0px;
+    animation: slider 60s linear infinite;
+  }
+
+  &-item {
+    min-width: 240px;
+
+    & > img {
+      width: 100%;
+    }
+  }
+}
+
+@keyframes slider {
+  0% {
+    right: 0px;
+  }
+
+  50% {
+    right: calc(100% - 4800px);
+  }
+
+  100% {
+    right: 0px;
+  }
+}

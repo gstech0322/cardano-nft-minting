@@ -1,0 +1,122 @@
+@import "../../styles/variables.scss";
+
+.navbar {
+  width: 100%;
+  position: absolute;
+  padding: 32px 0 0;
+  justify-content: center;
+  z-index: 99;
+
+  &-wrapper {
+    justify-content: space-between;
+  }
+
+  &-logo {
+    font-size: 24px;
+    padding-left: 32px;
+    font-weight: bold;
+    text-shadow: 0 0 2px rgba($color: $black, $alpha: 0.8);
+    color: $black;
+
+    @media (max-width: 768px) {
+      padding-left: 16px;
+    }
+
+    @media (max-width: 425px) {
+      padding-left: 8px;
+    }
+
+    & > img {
+      width: 64px;
+      margin-right: 8px;
+    }
+  }
+
+  &-wrapper {
+    padding-right: 16px;
+
+    @media (max-width: 768px) {
+      padding-right: 16px;
+    }
+
+    @media (max-width: 425px) {
+      padding-right: 8px;
+    }
+
+    & > div {
+      &:not(:last-child) {
+        margin-right: 48px;
+      }
+    }
+  }
+
+  &-links {
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+    & > a {
+      text-decoration: none;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      font-size: 20px;
+      font-weight: bold;
+      transition: 0.3s;
+      justify-content: center;
+      color: $black;
+      text-shadow: 0 0 2px rgba($color: $black, $alpha: 0.8);
+
+      &:not(:last-child) {
+        margin-right: 32px;
+      }
+    }
+
+    &-discord {
+      padding: 0 0 0 16px;
+      font-size: 32px !important;
+      color: #4e89ff !important;
+    }
+
+    &-twitter {
+      font-size: 32px !important;
+      color: #1da1f2 !important;
+    }
+  }
+
+  &-social {
+    & > a {
+      text-decoration: none;
+      color: black;
+      font-size: 32px;
+      color: $black;
+      transition: 0.3s;
+
+      &:not(:last-child) {
+        margin-right: 32px;
+      }
+    }
+
+    & > svg {
+      font-size: 32px;
+      margin: 0 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      color: $black;
+      display: none;
+
+      &:hover {
+        color: $black;
+      }
+
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+
+      @media (max-width: 768px) {
+        display: inline;
+        margin: 0 0 0 16px;
+      }
+    }
+  }
+}

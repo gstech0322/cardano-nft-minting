@@ -1,0 +1,177 @@
+@import "../../styles/variables.scss";
+
+.hero {
+  position: relative;
+  width: 100%;
+  padding: 128px 0 24px;
+  align-items: center;
+  z-index: 1;
+
+  &-wrapper {
+    align-items: center;
+  }
+
+  &-background {
+    position: absolute;
+    width: calc(100% + 24px);
+    height: 100%;
+    background-image: url("../../resources/hero_banner.png");
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    top: 0;
+    z-index: 1;
+    border-radius: 0 0 64px 64px;
+
+    @media (max-width: 768px) {
+      border-radius: 0 0 32px 32px;
+    }
+  }
+
+  &-title {
+    position: relative;
+    width: 480px;
+    height: 480px;
+    margin-bottom: 64px;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+
+    @media (max-width: 768px) {
+      width: 360px;
+      height: 360px;
+    }
+
+    &:before {
+      position: absolute;
+      content: " ";
+      width: 100%;
+      padding-top: 100%;
+      background-image: url("../../resources/hero-title.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      z-index: 1;
+    }
+
+    & > span {
+      text-align: center;
+      padding: 0 24px 0 48px;
+      color: $black;
+      font-size: 48px;
+      font-weight: bold;
+      z-index: 2;
+
+      &:first-child {
+        margin-top: 24px;
+      }
+
+      &:not(:last-child) {
+        font-size: 32px;
+        margin-bottom: 16px;
+
+        @media (max-width: 1024px) {
+          font-size: 32px;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 24px;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        font-size: 72px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 64px;
+      }
+    }
+  }
+
+  &-news {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: $black;
+    background-image: linear-gradient(135deg, $pink-light, $blue-lighter);
+    padding: 24px 16px;
+    border-radius: 8px;
+  }
+
+  &-comment {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 0 60px 0 88px;
+    color: $black;
+    z-index: 2;
+    font-size: 24px;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+  }
+
+  &-timer {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    padding: 16px 0 32px;
+    z-index: 2;
+
+    &-item {
+      margin: 8px;
+      width: 96px;
+      padding: 8px;
+      background-image: linear-gradient(135deg, $pink-light, $blue-lighter);
+      border-radius: 16px;
+
+      @media (max-width: 768px) {
+        padding: 8px;
+        width: 88px;
+      }
+
+      & > span {
+        text-align: center;
+        font-size: 16px;
+        color: $red;
+
+        &:first-child {
+          font-size: 48px;
+          color: $red;
+        }
+      }
+    }
+  }
+
+  &-mint {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    z-index: 2;
+    padding: 48px 0 32px;
+
+    & > button {
+      padding: 12px 32px;
+      background-image: linear-gradient(90deg, $pink-light, $blue-lighter);
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      border: 0;
+      border-radius: 16px;
+      cursor: pointer;
+
+      &:hover {
+        background-image: linear-gradient(270deg, $pink-light, $blue-lighter);
+      }
+
+      & > a {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+  }
+}
